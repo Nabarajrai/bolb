@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+          <img src="1.png" id="img" alt="">
+            <button id="right">On</button><button id="left">Off</button>
+        </div>
+    </div>
+    <script>
+            const images=['1.png','2.jpg']
+       const img=document.querySelector('#img');
+        const right=document.querySelector('#right');
+        const left=document.querySelector('#left');
+        function handleRight(){
+            img.setAttribute('src',images[0]);
+            // img.src='1.png';
+        }
+        function handleLeft(){
+        img.setAttribute('src',images[1]);
+            // img.src='2.jpg';
+        }
+        right.addEventListener('click',handleRight);
+        left.addEventListener('click',handleLeft);
+    </script>
+</body>
+</html>
